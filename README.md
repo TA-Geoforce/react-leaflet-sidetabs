@@ -91,9 +91,9 @@ export default class App extends Component {
 }
 ```
 
-You can find the following example in the folder ```example```. Run the above code by executing the following scripts in package.json, which is stated underneath:
+You can find the following example in the folder ```example```. Run the above code by executing the following scripts in package.json in the ```example``` folder, which is stated underneath:
 
-1) ```deploy```
+1) ```start```
 
 
 ## License
