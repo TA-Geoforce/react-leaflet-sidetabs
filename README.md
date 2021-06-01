@@ -2,7 +2,7 @@
 
 > A [react-leaflet](https://github.com/PaulLeCam/react-leaflet) plugin of [sidebar-v2](https://github.com/Turbo87/sidebar-v2)
 
-[![NPM](https://img.shields.io/npm/v/react-leaflet-sidetabs.svg)](https://www.npmjs.com/package/react-leaflet-v2sidebar-v2) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-leaflet-sidetabs.svg)](https://www.npmjs.com/package/react-leaflet-sidetabs) ![npm downloads](https://img.shields.io/npm/dw/react-leaflet-sidetabs) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 inspired by [@condense/react-leaflet-sidebarv2](https://github.com/condense/react-leaflet-sidebarv2)
 
@@ -24,6 +24,11 @@ Sidebar should be sibling of react-leaflet Map component.
 
 Sidebar is alignable to left and right with *position* prop. Also Tabs are alignable to bottom and top with *anchor* prop.
 
+To get started, to be able to run the example you have execute:
+```bash
+npm install
+```
+in the folders ```react-leaflet-sidetabs``` and ```example```.
 
 ```jsx
 import React, { Component } from 'react'
@@ -85,6 +90,11 @@ export default class App extends Component {
   }
 }
 ```
+
+You can find the following example in the folder ```example```. Run the above code by executing the following scripts in package.json, which is stated underneath:
+
+1) ```deploy```
+
 
 ## License
 
