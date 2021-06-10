@@ -4,13 +4,11 @@ import Tab from './Tab'
 import MenuButton from './MenuButton'
 import './sidebar.css'
 
-const { MapComponent } = require('react-leaflet')
-
 const TabType = PropTypes.shape({
   type: PropTypes.oneOf([Tab])
 })
 
-class Sidebar extends MapComponent {
+class Sidebar extends React.Component {
   onClose(e) {
     e.preventDefault()
     e.stopPropagation()

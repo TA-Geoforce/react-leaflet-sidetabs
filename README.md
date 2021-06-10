@@ -7,13 +7,13 @@
 inspired by [@condense/react-leaflet-sidebarv2](https://github.com/condense/react-leaflet-sidebarv2)
 
 
+## Complete example with react-leaflet-sidetabs
 
-## Install
+To get started, to be able to run the example you have execute in the package.json in the root folder the script:
 
 ```bash
-npm install --save react-leaflet-sidetabs
+prepare
 ```
-
 ## Usage
 
 Sidebar should be sibling of react-leaflet Map component. 
@@ -32,9 +32,11 @@ in the folders ```react-leaflet-sidetabs``` and ```example```.
 
 ```jsx
 import React, { Component } from 'react'
-import { Map, TileLayer } from 'react-leaflet';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import { Sidebar, Tab } from 'react-leaflet-sidetabs'
+import { Tab } from '../../src/index.js'
+import { Sidebar } from '../../src/index.js'
+
 import { FiHome, FiChevronRight, FiSearch, FiSettings } from "react-icons/fi";
 
 export default class App extends Component {
@@ -43,6 +45,7 @@ export default class App extends Component {
     this.state = {
       collapsed: true,
       selected: 'home',
+      glowing:'search'
     };
   }
 
@@ -53,38 +56,38 @@ export default class App extends Component {
     this.setState({
       collapsed: false,
       selected: id,
+      glowing: null
     })
   }
 
   render () {
     return (
       <div>
+        <MapContainer className="mapStyle" center={[41.09, 28.97]} zoom={7}>
+          <TileLayer
+            attribution=""
+            url={'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'}
+          />
+        </MapContainer>
         <Sidebar
           id="sidebar"
           position="right"
-          collapsed={this.state.collapsed}
-          closeIcon={<FiChevronRight />}
+          collapsed={this.state.collapsed}closeIcon={<FiChevronRight />}
           selected={this.state.selected}
+          glowing = {this.state.glowing}
           onOpen={this.onOpen.bind(this)}
           onClose={this.onClose.bind(this)}
         >
            <Tab id="home" header="Home" icon={<FiHome />}>
             <p>No place like home!</p>
            </Tab>
-           <Tab id="search" header="Search" icon={<FiSearch />}>
+           <Tab id="search" header="Search" icon={<FiSearch />} >
             <p>The noblest search is the search for excellence!</p>
            </Tab>
            <Tab id="settings" header="Settings" anchor="bottom" icon={<FiSettings />}>
             <p>We don't want privacy so much as privacy settings!</p>
            </Tab>           
         </Sidebar>
-
-        <Map className="mapStyle" center={[0, 0]} zoom={7}>
-          <TileLayer
-            attribution=""
-            url={'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'}
-          />
-        </Map>
       </div>
     )
   }
