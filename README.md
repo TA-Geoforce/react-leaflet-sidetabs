@@ -1,4 +1,4 @@
-# react-leaflet-sidetabs [(DEMO)](https://eferhatg.com/react-leaflet-sidetabs/)
+# react-leaflet-sidetabs [(DEMO)](https://eferhatg.com/react-leaflet-sidetabs/)[![Node.js CI](https://github.com/TA-Geoforce/react-leaflet-sidetabs/actions/workflows/node.js.yml/badge.svg)](https://github.com/TA-Geoforce/react-leaflet-sidetabs/actions/workflows/node.js.yml)
 
 > A [react-leaflet](https://github.com/PaulLeCam/react-leaflet) plugin of [sidebar-v2](https://github.com/Turbo87/sidebar-v2)
 
