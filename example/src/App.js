@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import { Tab } from '../../src/index.js'
-import { Sidebar } from '../../src/index.js'
+import { Tab, Sidebar } from '../../src/index.js'
 
 import { FiHome, FiChevronRight, FiSearch, FiSettings } from "react-icons/fi";
 
@@ -53,7 +52,7 @@ export default class App extends Component {
            </Tab>
            <Tab id="settings" header="Settings" anchor="bottom" icon={<FiSettings />}>
             <p>We don't want privacy so much as privacy settings!</p>
-           </Tab>           
+           </Tab>
         </Sidebar>
       </div>
     )

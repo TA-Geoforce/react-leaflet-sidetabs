@@ -70,7 +70,7 @@ describe('MenuButton', () => {
         collapsed={false}
         onClose={() => {}}
         onOpen={() => {}}
-        glowing = "glowing"/>
+        glowing = 'test'/>
     )
     let tree = component.toJSON()
     expect(tree).toMatchSnapshot()

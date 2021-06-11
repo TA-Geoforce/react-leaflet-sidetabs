@@ -32,7 +32,7 @@ exports[`MenuButton has disabled class disabled equals true 1`] = `
 
 exports[`MenuButton has glowing on 1`] = `
 <li
-  className=" active disabled"
+  className=" active disabled glowing"
 >
   <a
     href="#test"

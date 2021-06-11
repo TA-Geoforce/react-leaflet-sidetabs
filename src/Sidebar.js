@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import { PropTypes } from 'prop-types'
 import Tab from './Tab'
 import MenuButton from './MenuButton'
@@ -8,7 +8,7 @@ const TabType = PropTypes.shape({
   type: PropTypes.oneOf([Tab])
 })
 
-class Sidebar extends React.Component {
+class Sidebar extends Component {
   onClose(e) {
     e.preventDefault()
     e.stopPropagation()
