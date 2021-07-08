@@ -13,14 +13,7 @@
   "scripts": {
     "test": "cross-env CI=1 react-scripts test --setupTestFrameworkScriptFile --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "build": "npm run build:lib && npm run build:dist && npm run build:dev",
-    "build:dist": "webpack src/index.js --output dist/react-leaflet-sidetabs.min.js",
-    "build:dev": "webpack src/index.js --mode development --output dist/react-leaflet-sidetabs.js",
-    "build:lib": "npm run compile:lib",
-    "clean:lib": "rm -Rf ./lib",
-    "compile:lib": "babel src --out-dir lib",
-    "example": "webpack-dev-server --config ./example/webpack.config.js",
-    "prepublishOnly": "npm run build"
+    "example": "webpack-dev-server --config ./example/webpack.config.js"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0 || ^17.0.0",
